@@ -18,7 +18,6 @@ struct StockBannerView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(quote.symbol)
                             .font(.headline)
-                            .foregroundColor(.white)
                         
                         MiniChartView() // Small line chart
                             .frame(width: 50, height: 20)
@@ -41,6 +40,5 @@ struct StockBannerView: View {
             }
         }
         .frame(height: 80)
-        .background(Color.black)
     }
 }
