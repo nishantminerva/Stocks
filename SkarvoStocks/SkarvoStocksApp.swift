@@ -14,9 +14,9 @@ struct SkarvoStocksApp: App {
     
     init() {
         do {
-            container = try ModelContainer(for: Quote.self)
+            container = try ModelContainer(for: Stock.self)
         } catch {
-            fatalError("Failed to create ModelContainer for Quote: \(error)")
+            fatalError("Failed to create ModelContainer for Stock: \(error)")
         }
     }
     

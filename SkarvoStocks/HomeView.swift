@@ -155,7 +155,7 @@ struct HomeView: View {
                         .padding()
                         .foregroundStyle(selectedColor)
                     if selectedDetent != .height(100) {
-                        Text("We can't wait to see what you will Create with Swift!")
+                        Text("New will Appear here!")
                     }
                 }
                 .presentationDetents([.height(100), .medium, .large], selection: $selectedDetent)
