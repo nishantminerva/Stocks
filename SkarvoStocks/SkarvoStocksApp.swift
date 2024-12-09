@@ -6,12 +6,26 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SkarvoStocksApp: App {
+    let container: ModelContainer
+    
+    init() {
+        do {
+            container = try ModelContainer(for: Quote.self)
+        } catch {
+            fatalError("Failed to create ModelContainer for Quote: \(error)")
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HomeView()
+            }
         }
+        .modelContainer(container)
     }
 }
